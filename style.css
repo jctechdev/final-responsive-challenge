@@ -49,28 +49,28 @@ input {
 .nav-show {
     color: var(--color-four);
     display: block;
-    position: fixed;
+    position: absolute;
     top: 15px;
     right: 40px;
     cursor: pointer;
+    background-color: var(--color-three);
+    padding: .1em .3em;
+    border-radius: 100px;
+}
+
+.nav-show:active, .nav-show:focus, .nav-show:hover {
+    background-color: #A59678;
 }
 .navigation {
     visibility: hidden;
     height: 0;
 }
-.nav-hide {
-    color: var(--color-four);
-    position: absolute;
-    display: none;
-    top: 15px;
-    right: 40px;
-    cursor: pointer;
-}
 
 #nav-btn:checked ~ .navigation {
     visibility: visible;
     height: auto;
-    transition: 2s ease-in;
+    transition: 2s ease-in-out;
+ 
 }
 .nav-show:active {
     opacity: .7;
@@ -83,8 +83,7 @@ input {
 .navigation__list {
     list-style-type: none;
     text-align: center;
-    line-height: 1.8;
-    
+    line-height: 1.8;    
 }
 .navigation__link {
     text-transform: uppercase;
